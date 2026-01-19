@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Tabs } from "./ui/tabs";
 import { config } from "../config/config";
 
-const ProjectContent = ({ title, description, image, tech, color }) => {
+const ProjectContent = ({ title, description, image, tech, color, src, href }) => {
   return (
     <div className="grid md:grid-cols-2 gap-6 items-start">
       <div className="relative group">
@@ -30,14 +30,38 @@ const ProjectContent = ({ title, description, image, tech, color }) => {
             ))}
           </div>
         </div>
-        <div className="mt-8 flex items-center gap-4">
+        {/* <div className="mt-8 flex items-center gap-4">
           <button className={`px-4 md:px-8 py-2 md:py-3 bg-gradient-to-r ${color} rounded-full text-white font-bold hover:shadow-lg transition-all text-xs sm:text-sm md:text-base`}>
+            <a href={href} target="_blank" rel="noopener noreferrer"> 
             Launch Project
+            </a>
           </button>
           <button className="px-4 md:px-8 py-2 md:py-3 bg-zinc-900 border border-white/10 rounded-full text-white font-bold hover:bg-zinc-800 transition-all text-xs sm:text-sm md:text-base">
+            <a href={src} target="_blank" rel="noopener noreferrer" className="ml-2"> 
             Source Code
+            </a>
           </button>
-        </div>
+        </div> */}
+        <div className="mt-8 flex items-center gap-4">
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`px-4 md:px-8 py-2 md:py-3 bg-gradient-to-r ${color} rounded-full text-white font-bold hover:shadow-lg transition-all text-xs sm:text-sm md:text-base inline-flex items-center justify-center`}
+  >
+    Launch Project
+  </a>
+
+  <a
+    href={src}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-4 md:px-8 py-2 md:py-3 bg-zinc-900 border border-white/10 rounded-full text-white font-bold hover:bg-zinc-800 transition-all text-xs sm:text-sm md:text-base inline-flex items-center justify-center"
+  >
+    Source Code
+  </a>
+</div>
+
       </div>
     </div>
   );
