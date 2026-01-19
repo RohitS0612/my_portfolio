@@ -20,7 +20,7 @@ export const config = {
     ],
     experience: [
       {
-        role: "Full Stack Developer",
+        role: "Associate Software Developer (Full Stack)",
         company: "Accucia Softwares pvt. ltd.",
         period: "March-2025 - November-2025",
         description: "Leading development of scalable web applications using React, Node.js, and cloud technologies.",
@@ -50,8 +50,8 @@ export const config = {
       tech: ["React", "Tailwind CSS", "JavaScript", "GSAP"],
       color: "from-blue-500 to-cyan-500",
       bgGradient: "from-blue-900 to-black",
-      src:"https://github.com/RohitS0612/my_portfolio.git",
-      href:"https://my-portfolio-taupe-ten-75.vercel.app/"
+      src:"https://github.com/RohitS0612/MacOs_Portfolio.git",
+      href:"https://mac-os-portfolio-plum.vercel.app/"
     },
     {
       title: "Bill Calculator Dashboard",
@@ -97,7 +97,11 @@ export const config = {
     { name: "Python", level: 80 },
     { name: "Tailwind CSS", level: 92 },
     { name: "MongoDB", level: 85 },
-    // { name: "AWS", level: 75 },
+    { name: "JAVA", level: 95 },
+    { name: "SprigBoot", level: 85 },
+    { name: "Nest.js", level: 85 },
+    { name: "Express.js", level: 85 },
+    
   ],
   certifications: [
     {
