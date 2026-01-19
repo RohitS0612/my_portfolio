@@ -55,11 +55,11 @@ export const Hero = () => {
                 backgroundColor=""
                 className="relative z-10"
                 responsive={true}
-                distortionStrength={10}
-                distortionRadius={80}
-                distortionMode="swirl"
+                distortionStrength={15}
+                distortionRadius={50}
+                distortionMode="repel"
                 followSpeed={0.3}
-                jitterStrength={7}
+                jitterStrength={10}
                 maxFps={30}
               />
             </div>
