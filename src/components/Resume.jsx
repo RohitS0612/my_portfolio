@@ -121,7 +121,7 @@ export const Resume = () => {
                   onClick={() => setIsModalOpen(true)}
                   className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl text-white font-bold text-lg flex items-center justify-center gap-3 hover:shadow-lg hover:shadow-blue-500/50 transition-all group"
                 >
-                  <IconEye className="w-6 h-6 group-hover:scale-110 transition-transform" />
+                  <IconEye className="w-6 h-5 group-hover:scale-110 transition-transform" />
                   View Resume
                 </button>
               </div>
@@ -151,7 +151,7 @@ export const Resume = () => {
               {/* Modal Header */}
               <div className="p-4 border-b border-white/5 flex items-center justify-between bg-black/80 backdrop-blur-xl sticky top-0 z-20">
                 <div className="flex items-center gap-4">
-                  <h3 className="text-white font-bold ml-2">Professional Resume</h3>
+                  {/* <h3 className="text-white font-bold ml-2">Professional Resume</h3> */}
                    <button
                     onClick={handleDownload}
                     className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center gap-2 transition-all text-sm font-bold shadow-lg shadow-blue-500/20"

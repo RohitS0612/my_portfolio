@@ -22,7 +22,7 @@ export const config = {
       {
         role: "Full Stack Developer",
         company: "Accucia Softwares pvt. ltd.",
-        period: "mar-2025 - November-2025",
+        period: "March-2025 - November-2025",
         description: "Leading development of scalable web applications using React, Node.js, and cloud technologies.",
         color: "blue-500",
       },
@@ -92,19 +92,21 @@ export const config = {
       year: "2022",
     },
   ],
-  gallery: [
-    { id: 1, src: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=400", x: 100, y: 100 },
-    { id: 2, src: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=400", x: 400, y: 150 },
-    { id: 3, src: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=400", x: 700, y: 100 },
-    { id: 4, src: "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?q=80&w=400", x: 250, y: 350 },
-    { id: 5, src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400", x: 550, y: 300 },
-  ],
+//   gallery: [
+//     { id: 1, src: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=400", x: 100, y: 100 },
+//     { id: 2, src: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=400", x: 400, y: 150 },
+//     { id: 3, src: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=400", x: 700, y: 100 },
+//     { id: 4, src: "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?q=80&w=400", x: 250, y: 350 },
+//     { id: 5, src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400", x: 550, y: 300 },
+//   ],
   contact: {
     message: "I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.",
     socials: [
-      { name: "GitHub", href: "#", icon: "IconBrandGithub" },
+      { name: "GitHub", href: "https://github.com/RohitS0612", icon: "IconBrandGithub" },
       { name: "Twitter", href: "#", icon: "IconBrandTwitter" },
-      { name: "Email", href: "mailto:hello@example.com", icon: "IconMail" },
+      { name: "Email", href: "mailto:shetakerohit6@gmail.com", icon: "IconMail" },
+      // { name: "LinkedIn", href: "https://www.linkedin.com/in/rohit-shetake-3a7728315/", icon: "IconBrandLinkedin" },
+      // { name: "Phone ", href: "tel:+919309723198", icon: "IconPhone" },
     ],
   },
 };
