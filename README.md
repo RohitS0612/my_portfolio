@@ -1,17 +1,60 @@
-# React + Vite
+# Rohit's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, visually stunning developer portfolio built with React, Vite, and Tailwind CSS. Featuring modern UI components, smooth animations, and a responsive design.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework**: [React 19](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Tabler Icons](https://tabler-icons.io/)
+- **3D/Visuals**: [COBE](https://github.com/shuding/cobe) (Globe)
 
-## React Compiler
+## 📦 Key Packages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Package | Purpose |
+| :--- | :--- |
+| `framer-motion` | Powering all entrance and interactive animations |
+| `@tabler/icons-react` | High-quality customizable SVG icons |
+| `cobe` | Lightweight interactive 3D globe visualization |
+| `react-pdf` | Professional PDF integration for resume viewing |
+| `styled-components` | Used for complex styled UI components (like the Loader) |
+| `@lottiefiles/lottie-player` | Integration for interactive Lottie animations |
+| `tailwindcss-animate` | Tailwind plugin for standard CSS animations |
+| `clsx` & `tailwind-merge` | Utility for efficient Tailwind class management |
 
-## Expanding the ESLint configuration
+## 🛠️ Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# my_portfolio
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/RohitS0612/my_portfolio.git
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+## ✨ Features
+
+- **Responsive Hero Section**: Modern typography and interactive pixelated canvas.
+- **Dynamic Projects Tab**: Categorized view of featured work.
+- **Integrated PDF Resume**: View and download resume directly from the site.
+- **Interactive Globe**: High-performance visualization in the contact section.
+- **Smooth Navigation**: One-page scrolling with active state tracking.
+- **Custom Cursor**: Immersive interaction experience.
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).

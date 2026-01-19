@@ -65,16 +65,16 @@ export const Resume = () => {
       <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-purple-500/10 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[150px] pointer-events-none" />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
-        <div className="border border-white/10 rounded-3xl p-8 md:p-12 backdrop-blur-sm bg-white/5 shadow-2xl">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 w-full">
+        <div className="border border-white/10 rounded-2xl md:rounded-3xl p-5 md:p-12 backdrop-blur-sm bg-white/5 shadow-2xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-6 md:mb-12"
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Skills & Resume</h2>
-            <p className="text-gray-400 text-lg">My technical expertise and professional background</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-2 md:mb-4">Skills & Resume</h2>
+            <p className="text-gray-400 text-base md:text-lg">My technical expertise and professional background</p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12">
@@ -104,24 +104,23 @@ export const Resume = () => {
               ))}
             </motion.div>
 
-            {/* Resume View */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="flex flex-col items-center justify-center space-y-8"
+              className="flex flex-col items-center justify-center space-y-4 md:space-y-8"
             >
-              <div className="w-full max-w-md bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-white/10 shadow-2xl">
-                <h3 className="text-2xl font-bold text-white mb-4 text-center">Resume</h3>
-                <p className="text-gray-400 text-center mb-6">
+              <div className="w-full max-w-md bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-6 md:p-8 border border-white/10 shadow-2xl">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2 md:mb-4 text-center">Resume</h3>
+                <p className="text-gray-400 text-sm md:text-base text-center mb-6">
                   Check out my detailed experience and professional certifications.
                 </p>
                 
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl text-white font-bold text-lg flex items-center justify-center gap-3 hover:shadow-lg hover:shadow-blue-500/50 transition-all group"
+                  className="w-full px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl text-white font-bold text-base md:text-lg flex items-center justify-center gap-2 md:gap-3 hover:shadow-lg hover:shadow-blue-500/50 transition-all group"
                 >
-                  <IconEye className="w-6 h-5 group-hover:scale-110 transition-transform" />
+                  <IconEye className="w-5 h-5 md:w-6 md:h-6 group-hover:scale-110 transition-transform" />
                   View Resume
                 </button>
               </div>

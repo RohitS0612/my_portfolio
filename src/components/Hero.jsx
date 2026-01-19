@@ -18,23 +18,23 @@ export const Hero = () => {
           <div className="space-y-4 text-center md:text-left flex flex-col items-center md:items-start">
             <EncryptedText
               text="DEVELOPER PORTFOLIO"
-              className="text-3xl md:text-3xl font-bold text-white uppercase tracking-tighter"
+              className="text-xl md:text-3xl font-bold text-white uppercase tracking-tighter"
             />
-            <h1 className="text-2xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
+            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
               {profile.name}
             </h1>
-            <p className="text-zinc-400 text-xl md:text-3xl font-medium">
+            <p className="text-zinc-400 text-lg md:text-3xl font-medium">
               {profile.title}
             </p>
-            <p className="text-zinc-300 text-lg leading-relaxed max-w-xl">
+            <p className="text-zinc-300 text-base md:text-lg leading-relaxed max-w-xl">
               {profile.description}
             </p>
             
-            <div className="flex flex-wrap gap-4 pt-4">
-              <a href="#projects" className="px-10 py-4 bg-white text-black font-bold rounded-full hover:bg-zinc-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+            <div className="flex flex-row flex-wrap justify-center md:justify-start gap-3 md:gap-4 pt-4 w-full">
+              <a href="#projects" className="flex-1 md:flex-none px-6 md:px-10 py-3 md:py-4 bg-white text-black text-sm md:text-base font-bold rounded-full hover:bg-zinc-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] text-center">
                 View Projects
               </a>
-              <a href="#contact" className="px-10 py-4 border border-white/20 rounded-full text-white font-bold hover:bg-white/5 transition-all">
+              <a href="#contact" className="flex-1 md:flex-none px-6 md:px-10 py-3 md:py-4 border border-white/20 rounded-full text-white text-sm md:text-base font-bold hover:bg-white/5 transition-all text-center">
                 Contact Me
               </a>
             </div>
