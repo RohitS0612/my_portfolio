@@ -80,6 +80,8 @@ export const Projects = () => {
           image={project.image}
           tech={project.tech}
           color={project.color}
+          src={project.src}
+          href={project.href}
         />
       </div>
     ),
