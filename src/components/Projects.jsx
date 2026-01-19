@@ -43,15 +43,18 @@ const ProjectContent = ({ title, description, image, tech, color, src, href }) =
           </button>
         </div> */}
         <div className="mt-8 flex items-center gap-4">
-  <a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className={`px-4 md:px-8 py-2 md:py-3 bg-gradient-to-r ${color} rounded-full text-white font-bold hover:shadow-lg transition-all text-xs sm:text-sm md:text-base inline-flex items-center justify-center`}
-  >
-    Launch Project
-  </a>
 
+          { href && (
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`px-4 md:px-8 py-2 md:py-3 bg-gradient-to-r ${color} rounded-full text-white font-bold hover:shadow-lg transition-all text-xs sm:text-sm md:text-base inline-flex items-center justify-center`}
+            >
+              Launch Project
+            </a>
+          )}
+       
   <a
     href={src}
     target="_blank"
