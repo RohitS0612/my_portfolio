@@ -1,9 +1,14 @@
+"use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { IconEye } from "@tabler/icons-react";
 import { config } from "../config/config";
+import dynamic from "next/dynamic";
 import { PinContainer } from "./ui/3d-pin";
-import { ResumeModal } from "./ResumeModal";
+const ResumeModal = dynamic(
+  () => import("./ResumeModal").then((mod) => mod.ResumeModal),
+  { ssr: false }
+);
 
 export const Resume = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
