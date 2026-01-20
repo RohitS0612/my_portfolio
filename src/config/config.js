@@ -22,8 +22,8 @@ export const config = {
       {
         role: "Associate Software Developer (Full Stack)",
         company: "Accucia Softwares pvt. ltd.",
-        period: "March-2025 - November-2025",
-        description: "Leading development of scalable web applications using React, Node.js, and cloud technologies.",
+        period: "Mar-2025  Oct-2025",
+       description:"Built full-stack web applications using React, Next.js, NestJS, and MongoDB. Implemented REST APIs, JWT authentication, and role-based access control while collaborating with cross-functional teams.",
         color: "blue-500",
       },
     ],
