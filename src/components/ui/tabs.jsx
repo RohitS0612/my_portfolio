@@ -26,7 +26,7 @@ export const Tabs = ({
     <>
       <div
         className={cn(
-          "flex flex-wrap items-center justify-center [perspective:1000px] relative max-w-full w-full gap-2 sm:gap-4",
+          "flex flex-wrap items-center justify-center [perspective:1000px] relative max-w-full w-full",
           containerClassName
         )}
       >

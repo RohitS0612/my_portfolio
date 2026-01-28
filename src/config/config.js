@@ -22,9 +22,16 @@ export const config = {
       {
         role: "Associate Software Developer (Full Stack)",
         company: "Accucia Softwares pvt. ltd.",
-        period: "Mar-2025  Oct-2025",
-       description:"Built full-stack web applications using React, Next.js, NestJS, and MongoDB. Implemented REST APIs, JWT authentication, and role-based access control while collaborating with cross-functional teams.",
+        period: "Mar-2025 – Oct-2025",
+        description: "Built full-stack web applications using React, Next.js, NestJS, and MongoDB. Implemented REST APIs, JWT authentication, and role-based access control while collaborating with cross-functional teams.",
         color: "blue-500",
+      },
+      {
+        role: "Web Development Intern",
+        company: "Creazione Softwares",
+        period: "Feb 2024 – Jul 2024",
+        description: "Worked as a Web Developer and team member on the Online Recruitment Portal project. Contributed to designing, developing, and implementing web features while collaborating closely with the team. Demonstrated strong problem-solving skills, dedication, and a disciplined work ethic throughout the internship.",
+        color: "purple-500",
       },
     ],
   },

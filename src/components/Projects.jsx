@@ -99,8 +99,8 @@ export const Projects = () => {
            transition={{ duration: 0.6 }}
            className="text-center mb-10 md:mb-20"
         >
-          <h2 className="text-3xl md:text-7xl font-bold text-white tracking-tight">
-            Featured Projects
+          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">
+            Stuff I Built 🔥
           </h2>
           {/* <p className="text-zinc-400 text-lg md:text-xl max-w-2xl mx-auto">
             A selection of my recent work, ranging from complex SaaS platforms to creative AI experiments.
