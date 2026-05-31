@@ -1,26 +1,24 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import { Navbar } from "./Navbar";
-import { MouseBlob } from "./MouseBlob";
 import { Hero } from "./Hero";
 import { About } from "./About";
+import { Skills } from "./Skills";
+import { Experience } from "./Experience";
 import { Projects } from "./Projects";
+import { Achievements } from "./Achievements";
 import { Resume } from "./Resume";
 import { Contact } from "./Contact";
-import { CustomCursor } from "./ui/custom-cursor";
 import Loader from "./ui/Loader";
 
-function Home() {
+const Home: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
-
-    // Smooth scroll behavior
-    document.documentElement.style.scrollBehavior = "smooth";
+    }, 1500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -30,17 +28,20 @@ function Home() {
   }
 
   return (
-    <div className="min-h-screen w-full bg-black antialiased relative overflow-x-hidden">
-      <CustomCursor />
-      <MouseBlob />
+    <div className="min-h-screen w-full bg-background antialiased relative overflow-x-hidden noise-bg">
       <Navbar />
-      <Hero />
-      <About />
-      <Projects />
-      <Resume />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Achievements />
+        <Resume />
+        <Contact />
+      </main>
     </div>
   );
-}
+};
 
 export default Home;
