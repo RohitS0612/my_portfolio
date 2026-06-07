@@ -47,6 +47,9 @@ export interface CertificationItem {
 
 export interface ContactDetails {
   message: string;
+  email: string;
+  phone: string;
+  whatsapp: string;
   socials: { name: string; href: string; icon: string }[];
 }
 
@@ -246,6 +249,9 @@ export const config: Config = {
   ],
   contact: {
     message: "I am always open to discussing new opportunities, full-stack architectural roles, or technical challenges. Drop a message below or reach out via social channels.",
+    email: "shetakerohit6@gmail.com",
+    phone: "+91 9309723198",
+    whatsapp: "https://wa.me/919309723198",
     socials: [
       { name: "GitHub", href: "https://github.com/RohitS0612", icon: "IconBrandGithub" },
       { name: "LinkedIn", href: "https://www.linkedin.com/in/rohit-shetake-3a7728315/", icon: "IconBrandLinkedin" },

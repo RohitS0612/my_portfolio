@@ -2,13 +2,15 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { IconBrandGithub, IconBrandLinkedin, IconMail, IconSend, IconArrowRight, IconMessageCircle, IconShieldCheck, IconClock, IconCircleCheck } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandLinkedin, IconMail, IconSend, IconArrowRight, IconMessageCircle, IconShieldCheck, IconClock, IconCircleCheck, IconBrandWhatsapp, IconPhone } from "@tabler/icons-react";
 import { config } from "../config/config";
 
 const IconMap: Record<string, React.ComponentType<any>> = {
   IconBrandGithub,
   IconBrandLinkedin,
   IconMail,
+  IconBrandWhatsapp,
+  IconPhone,
 };
 
 export const Contact: React.FC = () => {
@@ -26,11 +28,18 @@ export const Contact: React.FC = () => {
     
     setStatus("submitting");
     
+    // Construct mailto link with form data
+    const subject = `Portfolio Inquiry from ${formData.name}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+    const mailtoLink = `mailto:${contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Trigger the mail client and show success state
     setTimeout(() => {
+      window.location.href = mailtoLink;
       setStatus("success");
       setFormData({ name: "", email: "", message: "" });
       setTimeout(() => setStatus("idle"), 5000);
-    }, 1500);
+    }, 1000);
   };
 
   return (
@@ -73,22 +82,57 @@ export const Contact: React.FC = () => {
               </div>
             </motion.div>
 
-            <div className="flex gap-4">
-              {contact.socials.map((social, index) => {
-                const Icon = IconMap[social.icon];
-                return (
-                  <motion.a
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ y: -5, scale: 1.1 }}
-                    className="p-4 rounded-2xl border border-border bg-background hover:border-accent/40 hover:bg-accent/5 transition-all text-secondary hover:text-accent"
-                  >
-                    {Icon && <Icon size={24} />}
-                  </motion.a>
-                );
-              })}
+            <div className="space-y-6">
+              <div className="flex gap-4">
+                {contact.socials.map((social, index) => {
+                  const Icon = IconMap[social.icon];
+                  return (
+                    <motion.a
+                      key={index}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ y: -5, scale: 1.1 }}
+                      className="p-4 rounded-2xl border border-border bg-background hover:border-accent/40 hover:bg-accent/5 transition-all text-secondary hover:text-accent"
+                      title={social.name}
+                    >
+                      {Icon && <Icon size={24} />}
+                    </motion.a>
+                  );
+                })}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <motion.a
+                  href={contact.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ x: 5 }}
+                  className="flex items-center gap-4 p-4 rounded-2xl border border-border bg-background hover:border-[#25D366]/40 hover:bg-[#25D366]/5 transition-all group"
+                >
+                  <div className="p-3 rounded-xl bg-[#25D366]/10 text-[#25D366] group-hover:bg-[#25D366] group-hover:text-white transition-all">
+                    <IconBrandWhatsapp size={20} />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-secondary group-hover:text-[#25D366]">WhatsApp</span>
+                    <span className="text-sm font-medium text-foreground">Chat with me</span>
+                  </div>
+                </motion.a>
+
+                <motion.a
+                  href={`tel:${contact.phone.replace(/\s+/g, '')}`}
+                  whileHover={{ x: 5 }}
+                  className="flex items-center gap-4 p-4 rounded-2xl border border-border bg-background hover:border-blue-500/40 hover:bg-blue-500/5 transition-all group"
+                >
+                  <div className="p-3 rounded-xl bg-blue-500/10 text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <IconPhone size={20} />
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-secondary group-hover:text-blue-500">Phone</span>
+                    <span className="text-sm font-medium text-foreground">{contact.phone}</span>
+                  </div>
+                </motion.a>
+              </div>
             </div>
           </div>
 
@@ -199,14 +243,43 @@ export const Contact: React.FC = () => {
           </motion.div>
         </div>
 
-        {/* Dense Engineering Footer */}
-        <div className="mt-24 pt-12 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6 opacity-40 grayscale">
-           <p className="text-[10px] font-bold uppercase tracking-[0.4em] text-secondary">
-            © {new Date().getFullYear()} ROHIT SHETAKE. ENG_BUILD_V2
-          </p>
-          <div className="flex gap-8">
-            <span className="text-[9px] font-mono tracking-widest uppercase">Prod_Mode: Active</span>
-            <span className="text-[9px] font-mono tracking-widest uppercase">Engine: Next_16</span>
+        {/* Professional Footer */}
+        <div className="mt-24 pt-12 border-t border-border flex flex-col md:flex-row justify-between items-center gap-8 transition-opacity duration-700">
+          <div className="flex flex-col items-center md:items-start gap-4">
+            <a href="#home" className="flex items-center gap-2 group">
+              <div className="w-8 h-8 rounded-lg bg-foreground text-background flex items-center justify-center text-[10px] font-bold shadow-lg group-hover:bg-accent group-hover:text-accent-foreground transition-all duration-500">
+                RS
+              </div>
+              <span className="text-sm font-bold tracking-tighter text-foreground uppercase">
+                Rohit Shetake<span className="text-accent">.</span>
+              </span>
+            </a>
+            <p className="text-[11px] font-medium text-secondary tracking-wide">
+              © {new Date().getFullYear()} Rohit Shetake. All rights reserved.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4">
+            {config.navigation.slice(0, 4).map((item) => (
+              <a 
+                key={item.name} 
+                href={item.href} 
+                className="text-[10px] font-bold uppercase tracking-[0.2em] text-secondary hover:text-accent transition-colors"
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+
+          <div className="flex flex-col items-center md:items-end gap-2">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-secondary/60">
+              Built with precision & passion
+            </p>
+            <div className="flex gap-4 opacity-40 hover:opacity-100 transition-opacity">
+               <div className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+               <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
+               <div className="w-1.5 h-1.5 rounded-full bg-secondary" />
+            </div>
           </div>
         </div>
       </div>
